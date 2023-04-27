@@ -1,0 +1,23 @@
+<h3>{{head}}</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>      
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+       <th scope="col">Send Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#users}}
+    <tr>   
+      <td>{{firstname}}</td>
+      <td>{{lastname}}</td>
+      <td>{{email}}</td>
+       <td><a href="{{mail_link}}?uid={{id}}" class="btn btn-primary">{{sendmailtext}}</a></td>
+    </tr>
+    {{/users}}
+  </tbody>
+</table>
+<a href="maillist.php" class="btn btn-primary">Mail Report</a>
+<a href="index.php" class="btn btn-primary">Upload User</a>
